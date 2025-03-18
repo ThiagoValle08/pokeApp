@@ -1,0 +1,55 @@
+<h5>Información Básica:</h5>
+<div *ngIf="pokemon" class="container">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-top">
+        <span class="card-title">Tipo:</span>
+      </div>
+      <div class="card-bottom"></div>
+    </div>
+    <div class="card-image">
+      <span>
+        {{ pokemon.types[0].type.name }}
+      </span>
+    </div>
+  </div>
+  <div class="card" style="background-color: rgb(238, 194, 224)">
+    <div class="card-content">
+      <div class="card-top">
+        <span class="card-title">Altura:</span>
+      </div>
+      <div class="card-bottom"></div>
+    </div>
+    <div class="card-image">{{ pokemon.height }} m</div>
+  </div>
+  <div class="card" style="background-color: rgb(255, 199, 95)">
+    <div class="card-content">
+      <div class="card-top">
+        <span class="card-title">Peso:</span>
+      </div>
+      <div class="card-bottom"></div>
+    </div>
+    <div class="card-image">{{ pokemon.weight }} kg</div>
+  </div>
+  <div class="pokemonSound" data-aos="zoom-in">
+    <div class="separator" [style]="{ background: color }"></div>
+    <div class="voice-chat-card" [style]="{ border: '3px solid ' + color }">
+      <div class="voice-chat-card-header">
+        <img
+          class="avatar"
+          [src]="pokemon.sprites.front_default"
+          [style]="{ border: '3px solid ' + color }"
+        />
+        <div class="username">Escucha Sonido de {{ pokemon.name }}</div>
+        <div class="status" [style]="{ background: color }"></div>
+      </div>
+      <div class="voice-chat-card-body">
+        <div class="audio-container">
+          <audio controls="">
+            <source type="audio/mp3" [src]="pokemon.cries.latest" />
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

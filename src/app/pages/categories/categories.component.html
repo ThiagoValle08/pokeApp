@@ -1,0 +1,22 @@
+<h2>CATEGORIAS</h2>
+<div class="contenedor">
+  <div class="cards_container">
+    <div
+      class="card"
+      (click)="(category.urlApi)"
+      *ngFor="let category of categories"
+    >
+      <div class="card-details">
+        <p class="text-title">{{ category.title }}</p>
+        <img [ngSrc]="category.image" class="text-body" height="1" width="1" />
+      </div>
+      <button
+        class="card-button"
+        (click)="searchPokemonsByCategory(category.urlApi)"
+        [routerLink]="['/categories/' + category.title + '/' + category.urlApi]"
+      >
+        Ver Pókemones
+      </button>
+    </div>
+  </div>
+</div>

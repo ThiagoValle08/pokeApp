@@ -1,0 +1,18 @@
+<div class="container">
+  <h5>Cadena De Evolución</h5>
+  <div class="cards">
+    <div
+      class="card-container"
+      [style]="{ border: '3px solid ' + color }"
+      *ngFor="let pokemon of evolutionChain; index as i"
+      data-aos="zoom-in-up"
+    >
+      <div class="title-card">
+        <p>{{ i + 1 }} - {{ pokemon.name | uppercase }}</p>
+      </div>
+      <div class="card-content">
+        <img [src]="pokemon.image" alt="pokemon.name" />
+      </div>
+    </div>
+  </div>
+</div>

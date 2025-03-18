@@ -1,0 +1,39 @@
+<div class="container">
+  <h5>Estadísticas Base:</h5>
+  <div class="progress-container">
+    <div>
+      <h4>Taza De Felicidad</h4>
+      <circle-progress
+        [percent]="base_happiness"
+        [radius]="60"
+        [outerStrokeWidth]="8"
+        [innerStrokeWidth]="3"
+        [titleFontSize]="'25'"
+        [titleColor]="'black'"
+        [subtitle]="'Felicidad'"
+        [subtitleFontSize]="'20'"
+        [outerStrokeColor]="progressColor"
+        [animation]="true"
+        [animationDuration]="300"
+      >
+      </circle-progress>
+    </div>
+    <div>
+      <h4>Taza De Captura</h4>
+      <circle-progress
+        [percent]="capture_rate"
+        [radius]="60"
+        [outerStrokeWidth]="8"
+        [innerStrokeWidth]="3"
+        [titleFontSize]="'25'"
+        [titleColor]="'black'"
+        [subtitle]="'Captura'"
+        [subtitleFontSize]="'20'"
+        [outerStrokeColor]="progressColor"
+        [animation]="true"
+        [animationDuration]="300"
+      >
+      </circle-progress>
+    </div>
+  </div>
+</div>

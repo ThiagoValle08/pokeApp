@@ -1,0 +1,9 @@
+div{
+  background-image: url(../../public/background_lines.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}

@@ -1,0 +1,54 @@
+<div class="container">
+  <h5>Clasificación</h5>
+  <div class="switch_container">
+    <div
+      class="switch"
+      *ngFor="let title of titles"
+      [ngStyle]="{
+        'background-color': title.property ? pokemonSpecie.color.name : 'balck'
+      }"
+    >
+      <h4>{{ title.title }}</h4>
+      <div class="cyber-toggle">
+        <input class="cyber-input" type="checkbox" [checked]="title.property" />
+        <label class="cyber-label">
+          <div class="cyber-core">
+            <div class="cyber-toggle-circle"></div>
+          </div>
+          <div class="cyber-power-line"></div>
+          <div class="cyber-power-ring">
+            <div
+              style="--x: 10%; --y: 20%; --px: 15px; --py: -10px; --delay: 0.1s"
+              class="ring-particle"
+            ></div>
+            <div
+              style="--x: 70%; --y: 30%; --px: -10px; --py: 15px; --delay: 0.3s"
+              class="ring-particle"
+            ></div>
+            <div
+              style="--x: 40%; --y: 80%; --px: 20px; --py: 10px; --delay: 0.5s"
+              class="ring-particle"
+            ></div>
+            <div
+              style="
+                --x: 90%;
+                --y: 60%;
+                --px: -15px;
+                --py: -15px;
+                --delay: 0.7s;
+              "
+              class="ring-particle"
+            ></div>
+          </div>
+          <div class="cyber-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

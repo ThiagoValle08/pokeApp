@@ -1,0 +1,43 @@
+<header class="header" id="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <img src="pokebola.png" alt="" />
+      <span>POKEAPP</span>
+    </div>
+    <div class="sidebar__list">
+      <a
+        routerLink="/home"
+        class="sidebar__link"
+        routerLinkActive="active-link"
+        [class.active-link]="activeLink === 'home'"
+        (click)="setActiveLink('home')"
+      >
+        <i class="pi pi-home"></i>
+        <span>Inicio</span>
+      </a>
+      <a
+        routerLink="/categories"
+        class="sidebar__link"
+        routerLinkActive="active-link"
+        [class.active-link]="activeLink === 'categories'"
+        (click)="setActiveLink('categories')"
+      >
+        <i class="pi pi-th-large"></i>
+        <span>Categorias</span>
+      </a>
+      <a
+        routerLink="/favorites"
+        class="sidebar__link"
+        routerLinkActive="active-link"
+        [class.active-link]="activeLink === 'favorites'"
+        (click)="setActiveLink('favorites')"
+      >
+        <i class="pi pi-heart"></i>
+        <span>Favoritos</span>
+      </a>
+    </div>
+  </div>
+</header>
+<main class="main container" id="main">
+  <router-outlet></router-outlet>
+</main>
